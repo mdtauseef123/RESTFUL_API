@@ -84,7 +84,7 @@ app.route("/articles/:articleTitle")
 .get(function(req,res){
     var val = req.params.articleTitle;
     Article.findOne({title: val})
-    .then((foundArticle)=>{
+    .then((foundArticle) => {
         if(foundArticle){
             res.send(foundArticle);
         }
